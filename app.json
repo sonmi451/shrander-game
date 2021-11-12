@@ -3,10 +3,11 @@
     "name": "Shrander Game",
     "slug": "shrander-game",
     "privacy": "public",
-    "sdkVersion": "32.0.0",
+    "sdkVersion": "43.0.0",
     "platforms": [
+      "android",
       "ios",
-      "android"
+      "web"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -24,6 +25,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "click the button to see a picture of either Molniya or Semyorka",
+    "githubUrl": "https://github.com/sonmi451/shrander-game"
   }
 }
