@@ -13,11 +13,11 @@ RUN npm install
 ENV PATH /shrander_game/node_modules/.bin:$PATH
 
 # Add files needed for app
-COPY ./assets /shrander_game/app/assets
-COPY ./App.js /shrander_game/app/App.js
-COPY ./app.json /shrander_game/app/app.json
+COPY ./assets /shrander_game/assets
+COPY ./app.json /shrander_game/app.json
+COPY ./App.js /shrander_game/App.js
 
 # Set working directory
-WORKDIR /shrander_game/app/
+WORKDIR /shrander_game/
 
 ENTRYPOINT bash
