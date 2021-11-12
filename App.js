@@ -6,6 +6,8 @@ import {
     Text,
     View
 } from 'react-native';
+import { Picker } from '@react-native-picker/picker';
+
 
 export default class ShranderGame extends React.Component {
     constructor(props) {
@@ -40,7 +42,7 @@ export default class ShranderGame extends React.Component {
 
     selectNone() {
         this.setState({
-            shrander: 'none',
+            shrander: 'None',
             title: 'Choose your Shrander!',
             image: require('./assets/blank.jpg')
         },
@@ -65,6 +67,17 @@ export default class ShranderGame extends React.Component {
 
             <View style={styles.oneButtonContainer}>
                 <Button color='orange' onPress={Math.random() < 0.5 ? this.selectMolniya : this.selectSemyorka} title='Give me a random one!'/>
+            </View>
+
+            <View style={styles.shranderDropdown}>
+              <Picker
+                selectedValue={this.state.shrander}
+                onValueChange={ (value) => this.setState({shrander: value})}
+                >
+              <Picker.Item label="None" value="None" />
+              <Picker.Item label="Molniya" value="Molniya" />
+              <Picker.Item label="Semyorka" value="Semyorka" />
+            </Picker>
             </View>
 
             <Image style={styles.shranderPic} source={this.state.image} />
@@ -112,5 +125,7 @@ const styles = StyleSheet.create({
         flex: 5,
         alignSelf: 'center',
     },
-
+    shranderDropdown: {
+        flex: 1,
+    },
 });
