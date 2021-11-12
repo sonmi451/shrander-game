@@ -1,4 +1,8 @@
+# node.js and expo
 node_modules/**/*
+node_modules/
+npm-debug.log
+yarn-error.log
 .expo/*
 npm-debug.*
 *.jks
@@ -6,4 +10,9 @@ npm-debug.*
 *.key
 *.mobileprovision
 
+# macOS
 .DS_Store
+
+node_modules/
+npm-debug.log
+yarn-error.log
